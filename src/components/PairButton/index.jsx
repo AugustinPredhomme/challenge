@@ -1,5 +1,5 @@
-const PairButton = ({ onGeneratePairs, isMaxReached, isListEmptyOrOne }) => (
-  <button onClick={onGeneratePairs} disabled={isMaxReached || isListEmptyOrOne}>
+const PairButton = ({ onGeneratePairs, isListEmptyOrOne }) => (
+  <button onClick={onGeneratePairs} disabled={isListEmptyOrOne}>
     Generate pair
   </button>
 );

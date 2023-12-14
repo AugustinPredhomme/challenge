@@ -1,10 +1,15 @@
 const appReducer = (state, action) => {
     switch (action.type) {
       case 'ADD_NUMBER':
+        const updatedNumbers = [...state.numbers, action.payload];
+        const isMaxReached = updatedNumbers.length === state.maxNumbers;
+
         return {
           ...state,
-          numbers: [...state.numbers, action.payload],
+          numbers: updatedNumbers,
+          isMaxReached,
         };
+        
       case 'GENERATE_PAIRS':
         const pairs = [];
         let remainingNumbers = [...state.numbers];

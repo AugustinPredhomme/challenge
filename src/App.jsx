@@ -20,7 +20,7 @@ const App = () => {
     const updatedNumbers = [...state.numbers, number];
 
     if (updatedNumbers.length <= state.maxNumbers){
-      dispatch({ type: 'ADD_NUMBER', payload: number, isMaxReached: updatedNumbers.length === state.maxNumbers});
+      dispatch({ type: 'ADD_NUMBER', payload: number});
     }
   };
 
